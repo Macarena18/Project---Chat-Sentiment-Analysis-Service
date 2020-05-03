@@ -1,5 +1,5 @@
 # Project---Chat-Sentiment-Analysis-Service
-![alt text](https://github.com/Macarena18/Project-ChatSentimentAnalysisService/blob/master/images/api_creation-benefit-microservices_made_easy.png)
+<src image https://github.com/Macarena18/Project-ChatSentimentAnalysisService/blob/master/images/api_creation-benefit-microservices_made_easy.png>
 
 **Requirements**:
 - Write an API in `Flask` just to store chat messages in a database like `MongoDB`(`api.py` ->> To run the server  `runServer.sh`).
