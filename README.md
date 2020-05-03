@@ -1,10 +1,11 @@
 # Project---Chat-Sentiment-Analysis-Service
-
+![alt text](
+    
 **Requirements**:
-- Write an API in `Flask` just to store chat messages in a database like `MongoDB Atlas`(`api.py` ->> To run the server  `runServer.sh`).
+- Write an API in `Flask` just to store chat messages in a database like `MongoDB`(`api.py` ->> To run the server  `runServer.sh`).
 - Extract **sentiment** from chat messages and perform a report over a whole conversation `sentiment.py`.
 - Recommend friends to a user based on the contents from chat documents using a recommender system with `NLP` analysis. `recommend.py`
-- Deploy the service with `Docker to Heroku` and store messages in a `Cloud database`. `Dockerfile`,`requirements.text`;`syncDb.sh` -> **Docker image creation**
+- Deploy the service with `Docker to Heroku` and store messages in a Cloud database`MongoAtlas`. (`Dockerfile`,`requirements.text`;`syncDb.sh` -> **Docker image creation**)
 
 # How to use the API?
 
