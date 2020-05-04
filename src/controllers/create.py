@@ -23,8 +23,10 @@ def CreateUser(new_username):
         username_details={"user_id": new_userid,"user_name":new_username}
         db.users.insert_one(username_details)
         return f"Sucess! user_id:{new_userid},user_name:{new_username}"
-
-@app.route("/chats/create/<new_chatname>?param=<username>")
+        #new_user=db.users.find_one({"user_name":new_username},{"_id":0,"user_id":1,"user_name":1})
+        #return {"Sucess!, user details:",dumps(new_user)}
+        
+@app.route("/chats/create/<new_chatname>")
 # create new chat with users
 def CreateChat(new_chatname):
     chatnames=(db.chats.distinct("chat_name"))

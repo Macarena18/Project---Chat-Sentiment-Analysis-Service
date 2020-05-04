@@ -7,7 +7,7 @@
 - Recommend friends to a user based on the contents from chat documents using a recommender system with `NLP` analysis. `recommend.py`
 - Deploy the service with `Docker to Heroku` and store messages in a Cloud database`MongoAtlas`. (`Dockerfile`,`requirements.text`;`syncDb.sh` -> **Docker image creation**)
 
-# How to use the API?
+# How to use the API? https://macaprojectpi.herokuapp.com
 
 **API EndPoints:**
 
@@ -19,8 +19,8 @@
 - *"/chats/`chatname`/addmessage/`username`?messagetext=`text`"* --> **Add a message to a chat**
 
 **doc `get.py`:**
-- *"/"* -> **API Welcome Message**
-- *"/chats"* -->  **Get all chats**
+- *"/"* -> **API Welcome Message** (https://macaprojectpi.herokuapp.com/)
+- *"/chats"* -->  **Get all chats** ()
 - *"/users"* -->  **Get all users**
 - *"/users/`name`"* --> **Get all messages from `username`**
 - *"/chats/`chatname`"* --> **Get all messages from `chatname`**
