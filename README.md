@@ -1,4 +1,4 @@
-# Project:Chat Sentiment Analysis Service
+# Project: Chat Sentiment Analysis Service
 <img src=https://github.com/Macarena18/Project-ChatSentimentAnalysisService/blob/master/images/api_creation-benefit-microservices_made_easy.png>
 
 **Requirements**:
@@ -6,8 +6,9 @@
 - Extract **sentiment** from chat messages and perform a report over a whole conversation `sentiment.py`.
 - Recommend friends to a user based on the contents from chat documents using a recommender system with `NLP` analysis. `recommend.py`
 - Deploy the service with `Docker to Heroku` and store messages in a Cloud database`MongoAtlas`. (`Dockerfile`,`requirements.text`;`syncDb.sh` -> **Docker image creation**)
+- `api-test.ipynb`: API tests
 
-# How to use the API? 
+## How to use the API? 
 Link -> https://macaprojectpi.herokuapp.com
 
 **API EndPoints:**
