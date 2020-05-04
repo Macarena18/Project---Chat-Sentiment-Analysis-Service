@@ -4,6 +4,7 @@ from pymongo import MongoClient
 from src.config import DBURL
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity as distance
+from bson.json_util import dumps
 
 client = MongoClient(DBURL)
 db = client.get_database()
