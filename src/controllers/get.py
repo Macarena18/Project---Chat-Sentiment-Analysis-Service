@@ -50,4 +50,4 @@ def getChatMessage(chatname):
 @app.route("/messages", methods=["GET"])
 #return all messages in the dataset
 def getMessages():
-    return dumps(db.messages.find())
+    return dumps(db.messages.find({},{"_id":0}))
