@@ -12,7 +12,7 @@ db = client.get_database()
 @app.route("/", methods=["GET"])
 #return welcome message
 def Welcome():
-    return "Welcome to the API - Chat Sentiment Analysis Service"
+    return dumps("Welcome to the API - Chat Sentiment Analysis Service")
 
 @app.route("/chats",methods=["GET"])
 # return all the different chats in the dataset

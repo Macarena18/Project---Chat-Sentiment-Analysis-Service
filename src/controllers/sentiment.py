@@ -45,7 +45,7 @@ def ChatSentiment(chatname):
     report={}
     report["Chat Sentiment"]= chat_sentiment
     report["Sentiment Messages"]={"Messages":messages_text,"Polarity_scores":messages_scores}
-    return report
+    return dumps(report)
 
 @app.route("/users/<username>/sentiment")
 # create report that extracts sentiment from user messages
@@ -80,7 +80,7 @@ def UserSentiment(username):
     report={}
     report["User Sentiment"]= chat_sentiment
     report["Messages Sentiment"]={"Messages":messages_text,"Polarity_scores":messages_scores}
-    return report
+    return dumps(report)
   
 
 

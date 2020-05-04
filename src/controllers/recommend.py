@@ -28,6 +28,6 @@ def RecommendUsers(username):
     similarity_matrix = distance(messages_df, messages_df)
     sim_df = pd.DataFrame(similarity_matrix, columns=messages.keys(), index=messages.keys())
     recommend_user=sim_df[username].sort_values(ascending=False)[1:].head(3)
-    return dict(recommend_user)
+    return dumps(dict(recommend_user))
 
 
