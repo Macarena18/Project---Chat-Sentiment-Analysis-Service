@@ -22,9 +22,8 @@ def CreateUser(new_username):
     else: # Create new user
         username_details={"user_id": new_userid,"user_name":new_username}
         db.users.insert_one(username_details)
-        return f"Sucess! user_id:{new_userid},user_name:{new_username}"
-        #new_user=db.users.find_one({"user_name":new_username},{"_id":0,"user_id":1,"user_name":1})
-        #return {"Sucess!, user details:",dumps(new_user)}
+        return dumps(f"Sucess! user_id:{new_userid},user_name:{new_username}")
+
         
 @app.route("/chats/create/<new_chatname>")
 # create new chat with users
@@ -45,8 +44,7 @@ def CreateChat(new_chatname):
             user = request.args[param] # create param
             user_id = db.users.find_one({'user_name':user},{'user_id':1})['user_id'] # get user_id for the username (param)
             db.chats.update({'chat_name': new_chatname },{'$addToSet': {'users': user_id } }) #include user_id in chat
-    #return dumps(db.chats.find_one({"chat_name":new_chatname}))
-    return f"Success! chat_id:{new_chatid},chat_name:{new_chatname}, users:{user_id}"
+    return dumps(f"Success! chat_id:{new_chatid},chat_name:{new_chatname}, users:{user_id}")
 
 
 @app.route("/chats/<chatname>/adduser/<username>")
@@ -70,10 +68,10 @@ def AddUserChat(chatname,username):
         raise APIError ("I´m sorry. This username already exists in this chat.")
     #Add new user in chat
     db.chats.update({'chat_id': chat_id },{'$addToSet': {'users': user_id } })
-    return f"Success! chat_id:{chat_id},chat_name:{chatname}, users:{user_id}, new_user:{username}"
+    return dumps(f"Success! chat_id:{chat_id},chat_name:{chatname}, users:{user_id}, new_user:{username}")
 
 
-@app.route("/chats/<chatname>/addmessage/<username>?messagetext=<text>")
+@app.route("/chats/<chatname>/addmessage/<username>")
 # Add message to a chat
 def AddMessageChat(chatname,username):
     usernames = db.users.distinct("user_name") # all usernames that exist
@@ -100,7 +98,7 @@ def AddMessageChat(chatname,username):
     #Create new message
     message_details={"user_name": username,"user_id":user_id,"chat_id":chat_id,"chat_name":chatname,"message_id":new_messageid,"message_text":messagetext}
     db.messages.insert_one(message_details)
-    return f"Success! chat_id:{chat_id},chat_name:{chatname}, user_id:{user_id}, user_name:{username},message_id:{new_messageid},message_text:{messagetext}"
+    return dumps(f"Success! chat_id:{chat_id},chat_name:{chatname}, user_id:{user_id}, user_name:{username},message_id:{new_messageid},message_text:{messagetext}")
 
 
 
