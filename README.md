@@ -15,22 +15,22 @@ Link -> https://macaprojectpi.herokuapp.com
 
 **doc `create.py`:**
 
-- *"/users/create/`new_username`"* --> **Create a username**
-- *"/chats/create/`new_chatname`?param=`username`"* --> **Create new chat with users**
-- *"/chats/`chatname`/adduser/`username`"* --> **Add a user to a chat**
-- *"/chats/`chatname`/addmessage/`username`?messagetext=`text`"* --> **Add a message to a chat**
+- *"/users/create/`new_username`"* --> **Create a username** (https://macaprojectpi.herokuapp.com/users/create/Lu)
+- *"/chats/create/`new_chatname`?param=`username`"* --> **Create new chat with users** (https://macaprojectpi.herokuapp.com/chats/create/viajeski?param=Nick)
+- *"/chats/`chatname`/adduser/`username`"* --> **Add a user to a chat** (https://macaprojectpi.herokuapp.com/chats/viajeski/adduser/Maca)
+- *"/chats/`chatname`/addmessage/`username`?messagetext=`text`"* --> **Add a message to a chat** (https://macaprojectpi.herokuapp.com/chats/travel/addmessage/Nick?messagetext=Hola%20quetal)
 
 **doc `get.py`:**
 - *"/"* -> **API Welcome Message** (https://macaprojectpi.herokuapp.com/)
-- *"/chats"* -->  **Get all chats** ()
-- *"/users"* -->  **Get all users**
-- *"/users/`name`"* --> **Get all messages from `username`**
-- *"/chats/`chatname`"* --> **Get all messages from `chatname`**
-- *"/messages"* --> **Get all messages**
+- *"/chats"* -->  **Get all chats** (https://macaprojectpi.herokuapp.com/chats)
+- *"/users"* -->  **Get all users** (https://macaprojectpi.herokuapp.com/users)
+- *"/users/`name`"* --> **Get all messages from `username`** (https://macaprojectpi.herokuapp.com/users/Tom)
+- *"/chats/`chatname`"* --> **Get all messages from `chatname`** (https://macaprojectpi.herokuapp.com/chats/travel)
+- *"/messages"* --> **Get all messages** (https://macaprojectpi.herokuapp.com/messages)
 
 **doc `sentiment.py`:**
-- *"/chats/`chatname`/sentiment"* --> **Report that extracts all sentiments from `chatname` messages** `NLTK sentiment analysis`
-- *"/users/`username`/sentiment"* --> **Report that extracts  all sentiments from `username` messages** `NLTK sentiment analysis`
+- *"/chats/`chatname`/sentiment"* --> **Report that extracts all sentiments from `chatname` messages** `NLTK sentiment analysis` (https://macaprojectpi.herokuapp.com/chats/travel/sentiment)
+- *"/users/`username`/sentiment"* --> **Report that extracts  all sentiments from `username` messages** `NLTK sentiment analysis` (https://macaprojectpi.herokuapp.com/users/Tom/sentiment)
 
 **doc `recommend.py`:**
-- *"/users/`username`/recommend"* --> **Recommend top 3 similar users for a `username`**
+- *"/users/`username`/recommend"* --> **Recommend top 3 similar users for a `username`** (https://macaprojectpi.herokuapp.com/users/Tom/recommend)

@@ -92,8 +92,8 @@ def AddMessageChat(chatname,username):
     
     #Check if user_id in chat  
     chat_users = db.chats.find({"chat_name": chatname},{"users": 1})
-    if user_id in [user["users"] for user in chat_users][0]:
-        raise APIError ("I´m sorry. This user already exists in this chat.")
+    if user_id not in [user["users"] for user in chat_users][0]:
+        raise APIError ("I´m sorry. This user is not in this chat.")
     
     #Create new message
     message_details={"user_name": username,"user_id":user_id,"chat_id":chat_id,"chat_name":chatname,"message_id":new_messageid,"message_text":messagetext}
