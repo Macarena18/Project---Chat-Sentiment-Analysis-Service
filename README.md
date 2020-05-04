@@ -1,4 +1,4 @@
-# Project---Chat-Sentiment-Analysis-Service
+# Project:Chat Sentiment Analysis Service
 <img src=https://github.com/Macarena18/Project-ChatSentimentAnalysisService/blob/master/images/api_creation-benefit-microservices_made_easy.png>
 
 **Requirements**:
